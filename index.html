@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body marginleft="100">
+<body marginleft="100px">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -45,38 +45,51 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
 </script>
-<button title="button Title " onclick="">点击我进行提交数据哦</button>
-<input type="password" placeholder="输入密码"> <br>
-<label for="username">用户名：</label>
-<input placeholder="输入文字" id="username" autofocus list="book" autocomplete="off"><br>
-<input type="button" value="我是button" src="images/"><br>
-<input type="date"><br>
-<input type="time"><br>
-<input type="week"><br>
-<input type="month"><br>
-<input type="email" placeholder="email"><br>
-<input type="url" placeholder="url"><br>
-<input type="file" placeholder="file" value="file"><br>
-<input type="search" placeholder="搜索"><br>
-<input type="datetime-local"><br>
-<input type="range"><br>
-<input type="radio"><br>
+<div align="center">
+    <button title="button Title " onclick="">点击我进行提交数据哦</button>
+    <input type="password" placeholder="输入密码"> <br>
+    <label for="username">用户名：</label>
+    <input placeholder="输入文字" id="username" autofocus list="book" autocomplete="off"><br>
+    <input type="button" value="我是button" src="images/"><br>
+    <input type="date"><br>
+    <input type="time"><br>
+    <input type="week"><br>
+    <input type="month"><br>
+    <input type="email" placeholder="email"><br>
+    <input type="url" placeholder="url"><br>
+    <input type="file" placeholder="file" value="file"><br>
+    <input type="search" placeholder="搜索"><br>
+    <input type="datetime-local"><br>
+    <input type="range"><br>
+    <input type="radio"><br>
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
-<input type="button" value="运行JavaScript" onclick="start()">
+    <input type="button" value="运行JavaScript" onclick="start()">
+</div>
 <a href="javascript:alert(describe)">运行JavaScript</a>
 <script type="text/javascript">
-    describe = "我描述了一些信息";
-    alert(describe);
+    describe = "我不可描述了一些信息";
+    confirm(describe);
 
+    f = function (name) {
+        confirm("姓名：" + name);
+    };
+    var f = function (name) {
+        confirm("姓名ff：" + name);
+    };
 
 
     function start() {
         alert("点击到了我，啊啊啊啊啊啊啊");
     }
+
+    function openLink() {
+        alert("确定要打开连接吗？");
+    }
+
 </script>
 
 <datalist id="book">
@@ -87,10 +100,14 @@
     <option>Option5</option>
     <option>Option6</option>
 </datalist>
-<article>
+<article align = "center">
 
+    <style type="text/css">
+
+    </style>
     <!-- header -->
     <header>
+        <link type="text/css" rel="stylesheet" href="out.css">
         文章的头部【大家一起来嗨嗨嗨】
     </header>
 
@@ -118,10 +135,10 @@
         </nav>
     </aside>
 
-    <img src="https://image3.suning.cn/uimg/cms/img/150124409440081567.jpg">
+    <img src="https://note.youdao.com/weiboSave/images/banner.png" onclick="openLink()">
     <!-- footer -->
-    <footer>
-        以上内容归pd_liu所有，盗版必究！！！
+    <footer style="background: #0f0; width: 100%; height: 100%; text-align: center; padding: 50px;">
+        <span style="background: #0000ff; width: 100%; height: 100%; text-align: center ">以上内容归pd_liu所有，盗版必究！！！</span>
     </footer>
 </article>
 </body>
